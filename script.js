@@ -1,15 +1,10 @@
-function updateTimer() {
-  const timerElement = document.getElementById('timer');
-  
-  const currentDateTime = new Date();
-  
-  const formattedTime = currentDateTime.toLocaleString(); // Formats date and time as per system locale
-  
-  timerElement.textContent = formattedTime;
+function updateTime(){
+	const tag = document.getElementById('timer');
+	const date = new Date();
+	const format = date.toLocaleString();// Formats date and time as per system locale
+	tag.textContent = format;
 }
-
 // Update the timer every second
-setInterval(updateTimer, 1000);
-
+setInterval(updateTime, 1000);
 // Initial call to display the timer immediately on load
-updateTimer();
+updateTime();
